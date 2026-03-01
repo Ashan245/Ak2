@@ -2,214 +2,276 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ashan Renuja | Graphic Designer & Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Ashan Renuja - Graphic Designer and Web Developer specializing in creative design and clean code">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="description" content="Ashan Renuja - Professional Graphic Designer and Web Developer. Creative designs and clean code for your business.">
+  <meta name="keywords" content="graphic designer, web developer, sri lanka, ui design, ashan renuja">
+  <meta property="og:title" content="Ashan Renuja | Portfolio">
+  <meta property="og:image" content="images/thumbnail.jpg">
+  
+  <title>Ashan Renuja | Graphic Designer & Web Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation with active state -->
-<nav id="navbar">
-  <h2 class="logo">Ashan.<span class="dot">•</span></h2>
+<!-- Navigation -->
+<nav>
+  <h2 class="logo">Ashan.<span class="dot">.</span></h2>
+  
   <ul class="nav-menu">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+    <li><a href="#blog" class="nav-link">Blog</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+  
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </nav>
 
-<!-- Hero Section with Typing Effect -->
+<!-- Hero Section with Typing Animation -->
 <section id="home" class="hero">
   <div class="hero-content">
-    <p class="greeting">Welcome to my portfolio</p>
     <h1>Hi, I'm <span class="highlight">Ashan Renuja</span></h1>
-    <div class="typed-text">
-      <span class="typing"></span>
-    </div>
-    <p class="tagline">Creative Design. Clean Code. Real Results.</p>
+    <p>I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+    <p class="hero-description">Creative Design. Clean Code. Real Results.</p>
     <div class="hero-buttons">
-      <button onclick="scrollToSection('portfolio')" class="btn primary">View My Work</button>
-      <button onclick="scrollToSection('contact')" class="btn secondary">Hire Me</button>
+      <button onclick="scrollToSection('contact')" class="btn primary">Hire Me</button>
+      <button onclick="scrollToSection('portfolio')" class="btn secondary">View Work</button>
     </div>
   </div>
-  <div class="scroll-indicator">
-    <span></span>
+  
+  <!-- Stats -->
+  <div class="stats-container">
+    <div class="stat-item">
+      <h3><span class="counter" data-target="50">0</span>+</h3>
+      <p>Projects Done</p>
+    </div>
+    <div class="stat-item">
+      <h3><span class="counter" data-target="30">0</span>+</h3>
+      <p>Happy Clients</p>
+    </div>
+    <div class="stat-item">
+      <h3><span class="counter" data-target="2">0</span></h3>
+      <p>Years Experience</p>
+    </div>
   </div>
 </section>
 
-<!-- About Section with Stats -->
-<section id="about" class="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
+<!-- About Section -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/profile.jpg" alt="Ashan Renuja" class="profile-img">
+    </div>
     <div class="about-content">
-      <div class="about-text">
-        <p>I'm a passionate <span class="highlight">Graphic Designer</span> and <span class="highlight">Web Developer</span> based in Sri Lanka. With over 3 years of experience, I create stunning visual designs and build responsive, user-friendly websites that drive results.</p>
-        <p>My approach combines creative aesthetics with technical excellence, ensuring every project stands out while performing flawlessly.</p>
-        <div class="stats">
-          <div class="stat-item">
-            <span class="stat-number" data-target="50">0</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="30">0</span>
-            <span class="stat-label">Happy Clients</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="3">0</span>
-            <span class="stat-label">Years Exp</span>
-          </div>
-        </div>
+      <p>
+        I design modern graphics and develop fast, responsive websites.
+        My goal is to create clean, creative, and effective digital experiences.
+        With 2+ years of experience in the industry, I've worked with clients from 
+        various sectors including tech, fashion, and education.
+      </p>
+      <div class="personal-info">
+        <div><strong>Name:</strong> Ashan Renuja</div>
+        <div><strong>Email:</strong> ashan@renuja.com</div>
+        <div><strong>Location:</strong> Colombo, Sri Lanka</div>
+        <div><strong>Freelance:</strong> Available</div>
       </div>
+      <button class="btn primary" onclick="downloadCV()">Download CV</button>
     </div>
   </div>
 </section>
 
 <!-- Skills Section with Progress Bars -->
-<section id="skills" class="skills">
-  <div class="container">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Design Skills</h3>
-        <div class="skill-item">
-          <span>Graphic Design</span>
-          <div class="progress-bar">
-            <div class="progress" data-width="95"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <span>UI/UX Design</span>
-          <div class="progress-bar">
-            <div class="progress" data-width="85"></div>
-          </div>
-        </div>
+<section id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>Graphic Design</span>
+        <span>90%</span>
       </div>
-      <div class="skill-category">
-        <h3>Development Skills</h3>
-        <div class="skill-item">
-          <span>HTML/CSS</span>
-          <div class="progress-bar">
-            <div class="progress" data-width="90"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <span>JavaScript</span>
-          <div class="progress-bar">
-            <div class="progress" data-width="80"></div>
-          </div>
-        </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="90"></div>
       </div>
     </div>
-    <div class="skills-box">
-      <span class="skill-tag">Adobe Photoshop</span>
-      <span class="skill-tag">Figma</span>
-      <span class="skill-tag">Illustrator</span>
-      <span class="skill-tag">React</span>
-      <span class="skill-tag">Node.js</span>
-      <span class="skill-tag">Responsive Design</span>
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>HTML5 & CSS3</span>
+        <span>95%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="95"></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- Portfolio Section with Filter -->
-<section id="portfolio" class="portfolio">
-  <div class="container">
-    <h2 class="section-title">My Work</h2>
-    <div class="portfolio-filter">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="design">Design</button>
-      <button class="filter-btn" data-filter="web">Web</button>
-      <button class="filter-btn" data-filter="branding">Branding</button>
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>JavaScript</span>
+        <span>85%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="85"></div>
+      </div>
     </div>
-    <div class="grid">
-      <div class="card" data-category="design">
-        <div class="card-image">
-          <i class="fas fa-paint-brush"></i>
-        </div>
-        <h3>Poster Design</h3>
-        <p>Creative posters for events</p>
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>UI/UX Design</span>
+        <span>88%</span>
       </div>
-      <div class="card" data-category="branding">
-        <div class="card-image">
-          <i class="fas fa-star"></i>
-        </div>
-        <h3>Logo Design</h3>
-        <p>Brand identity creation</p>
+      <div class="progress-bar">
+        <div class="progress" data-progress="88"></div>
       </div>
-      <div class="card" data-category="web">
-        <div class="card-image">
-          <i class="fas fa-code"></i>
-        </div>
-        <h3>Website Design</h3>
-        <p>Modern responsive sites</p>
+    </div>
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>React</span>
+        <span>75%</span>
       </div>
-      <div class="card" data-category="web">
-        <div class="card-image">
-          <i class="fas fa-rocket"></i>
-        </div>
-        <h3>Landing Page</h3>
-        <p>High-converting pages</p>
+      <div class="progress-bar">
+        <div class="progress" data-progress="75"></div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-info">
+        <span>Adobe Photoshop</span>
+        <span>92%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="92"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section with Multiple Options -->
-<section id="contact" class="contact">
-  <div class="container">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-content">
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>ashan.renuja@example.com</p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <h3>Phone</h3>
-          <p>+94 77 XXX XXXX</p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Location</h3>
-          <p>Colombo, Sri Lanka</p>
-        </div>
-      </div>
-      <div class="contact-buttons">
-        <button onclick="openWhatsApp()" class="btn whatsapp">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </button>
-        <button onclick="openLinkedIn()" class="btn linkedin">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </button>
-        <button onclick="openGmail()" class="btn gmail">
-          <i class="fas fa-envelope"></i> Gmail
-        </button>
-      </div>
+<!-- Portfolio with Filtering -->
+<section id="portfolio">
+  <h2 class="section-title">My Work</h2>
+  
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+    <button class="filter-btn" data-filter="web">Web Development</button>
+    <button class="filter-btn" data-filter="ui">UI/UX</button>
+  </div>
+  
+  <div class="grid" id="portfolio-grid">
+    <!-- Projects will be loaded by JavaScript -->
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <h2 class="section-title">What Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <div class="client-img">👤</div>
+      <p>"Amazing work! Delivered before deadline and exceeded expectations. Will definitely work again."</p>
+      <h4>- Kasun Perera</h4>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <div class="position">CEO, TechStart</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="client-img">👤</div>
+      <p>"Very professional and creative. Understood exactly what I needed for my brand."</p>
+      <h4>- Nimali Fernando</h4>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <div class="position">Fashion Designer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="client-img">👤</div>
+      <p>"Great communication and excellent technical skills. Highly recommended!"</p>
+      <h4>- Ruwan Wijesinghe</h4>
+      <div class="stars">⭐⭐⭐⭐</div>
+      <div class="position">Restaurant Owner</div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2024 Ashan Renuja. All rights reserved.</p>
+<!-- Blog Section -->
+<section id="blog">
+  <h2 class="section-title">Latest Articles</h2>
+  <div class="blog-grid">
+    <article class="blog-card">
+      <div class="blog-image"></div>
+      <div class="blog-content">
+        <div class="blog-date">March 1, 2026</div>
+        <h3>10 Graphic Design Trends 2026</h3>
+        <p>Check out the hottest design trends that are dominating the creative industry this year...</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-image"></div>
+      <div class="blog-content">
+        <div class="blog-date">February 15, 2026</div>
+        <h3>How to Build a Fast Website</h3>
+        <p>Learn the secrets of creating lightning-fast websites that users will love...</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-image"></div>
+      <div class="blog-content">
+        <div class="blog-date">January 28, 2026</div>
+        <h3>UI/UX Principles for Beginners</h3>
+        <p>Essential design principles every designer should know to create amazing user experiences...</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2 class="section-title">Let's Work Together</h2>
+  <p class="contact-description">Have a project in mind? I'd love to hear about it.</p>
+  
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <div class="info-item">
+        <span class="icon">📧</span>
+        <span>ashan@renuja.com</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">📱</span>
+        <span>+94 77 123 4567</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">📍</span>
+        <span>Colombo, Sri Lanka</span>
+      </div>
+    </div>
+    
+    <form id="contact-form" onsubmit="return validateForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+  </div>
+  
   <div class="social-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-behance"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#" class="social-btn">GitHub</a>
+    <a href="#" class="social-btn">LinkedIn</a>
+    <a href="#" class="social-btn">Behance</a>
+    <a href="#" class="social-btn">Instagram</a>
   </div>
-</footer>
+</section>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Back to Top">↑</button>
 
 <script src="script.js"></script>
 </body>
+      </html></body>
   </html>
