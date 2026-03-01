@@ -40,7 +40,8 @@ function scrollToSection(id) {
 
 // Contact functions
 function openWhatsApp() {
-  window.open("https://wa.me/9477XXXXXXX", "_blank");
+  // Replace with your WhatsApp number (Sri Lanka format: 94XXXXXXXXX)
+  window.open("https://wa.me/94771234567", "_blank");
 }
 
 function openLinkedIn() {
@@ -70,7 +71,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
       current = section.getAttribute('id');
     }
   });
